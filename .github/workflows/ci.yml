@@ -11,23 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clonar repositorio
-        uses: actions/checkout@v4 
-      
+        uses: actions/checkout@v4
+
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20'  # Cambiar la versión de Node.js segun se necesite
 
       - name: Instalar dependencias
         run: npm install
-
-      - name: Lint del código
+      
+      - name: Lint del codigo
         run: npm run lint
 
       - name: Ejecutar pruebas
         run: npm test
 
-      - name: Simular despliegue
+      - name: Simular Despliegue
         run: |
-          echo "Despliegue simulado: la aplicacion pasó lint y pruebas correctamente"
-          
+          echo "Despliegue simulado exitosamente."
+          Lint y pruebas pasadas correctamente.
